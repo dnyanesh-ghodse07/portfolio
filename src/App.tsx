@@ -1,4 +1,5 @@
 import "./App.css";
+import Profile from "./assets/profile-pic (12).png";
 
 function App() {
   const cards = [
@@ -35,7 +36,7 @@ function App() {
       <div className="bg-gray-900 text-white">
         <div className="container mx-auto flex flex-col items-center justify-center py-20 px-10">
           <img
-            src="./assets/profile-pic (12).png"
+            src={Profile}
             alt="Hero Image"
             className="rounded-full w-32 h-32 mb-4"
           />
