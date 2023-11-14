@@ -35,7 +35,7 @@ function App() {
       <div className="bg-gray-900 text-white">
         <div className="container mx-auto flex flex-col items-center justify-center py-20 px-10">
           <img
-            src="src/assets/profile-pic (12).png"
+            src="./assets/profile-pic (12).png"
             alt="Hero Image"
             className="rounded-full w-32 h-32 mb-4"
           />
