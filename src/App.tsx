@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Layout from "./pages/Layout";
-import ThemeContext from "./store/themeContext";
+import ThemeContext from "../src/store/ThemeContext";
 
 function App() {
   const [isDark, setIsDark] = useState<boolean>(true);
