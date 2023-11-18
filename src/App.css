@@ -1,3 +1,15 @@
-body {
-  background: #eee;
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: cyan !important;
+  font-weight: 500;
+}
+.ant-tabs-tab .ant-tabs-tab-btn {
+  color: rgba(0, 255, 255, 0.598) !important;
+  font-weight: 500;
+}
+
+.ant-drawer-wrapper-body .ant-drawer-header {
+  background: #999;
+}
+.ant-drawer-wrapper-body .ant-drawer-body {
+  background: #000;
 }
