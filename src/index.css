@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.ant-tabs-tab .ant-tabs-tab-active {
-  color: aquamarine !important;
-  background: red !important;
-}
-
-.ant-tabs-nav-list {
-  color: aquamarine !important;
+:root {
+  --primary-bg-dark: rgb(15 23 42 / 1);
+  --primary-text-dark: rgb(165 243 252/1);
+  --secondary-text-dark: rgba(0, 255, 255, 0.598);
+  --primary-bg-light: rgba(255, 255, 255, 0.844);
+  --primary-text-light: #000;
+  --secondary-text-light: #666;
 }

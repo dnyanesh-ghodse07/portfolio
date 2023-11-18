@@ -1,15 +1,39 @@
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+.active-tab-dark .ant-tabs-ink-bar {
+  background: red !important;
+}
+
+.active-tab-dark .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: cyan !important;
   font-weight: 500;
 }
-.ant-tabs-tab .ant-tabs-tab-btn {
+
+.active-tab-light .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: rgb(0, 0, 0) !important;
+  font-weight: 500;
+}
+
+.active-tab-dark .ant-tabs-tab .ant-tabs-tab-btn {
   color: rgba(0, 255, 255, 0.598) !important;
   font-weight: 500;
 }
 
-.ant-drawer-wrapper-body .ant-drawer-header {
-  background: #999;
+.active-tab-light .ant-tabs-tab .ant-tabs-tab-btn {
+  color: rgba(24, 24, 24, 0.598) !important;
+  font-weight: 500;
 }
-.ant-drawer-wrapper-body .ant-drawer-body {
-  background: #000;
+
+.active-tab-dark .ant-drawer-wrapper-body .ant-drawer-header {
+  background: #000000 !important;
+}
+
+.active-tab-light .ant-drawer-wrapper-body .ant-drawer-header {
+  background: #fff !important;
+}
+
+.active-tab-dark .ant-drawer-wrapper-body .ant-drawer-body {
+  background: #000 !important;
+}
+
+.active-tab-light .ant-drawer-wrapper-body .ant-drawer-body {
+  background: #fff !important;
 }

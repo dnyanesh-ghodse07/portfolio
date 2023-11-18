@@ -1,11 +1,19 @@
 import { Tabs } from "antd";
+import useTheme from "../hooks/useTheme";
 const Experience = () => {
+  const { isDark } = useTheme();
   const items = [
     {
       key: "1",
       label: "Analytic Edge",
       children: (
-        <ul className="text-cyan-200 list-disc md:text-lg">
+        <ul
+          className={
+            `${
+              isDark ? "text-secondary-text-dark" : "text-secondary-text-light"
+            }` + " list-disc md:text-lg"
+          }
+        >
           <li>
             Developed and maintained responsive web applications using React.js,
             collaborating with design and backend teams to ensure pixel- perfect
@@ -34,7 +42,13 @@ const Experience = () => {
       key: "2",
       label: "Dhwani",
       children: (
-        <ul className="text-cyan-200 list-disc md:text-lg">
+        <ul
+          className={
+            `${
+              isDark ? "text-secondary-text-dark" : "text-secondary-text-light"
+            }` + " list-disc md:text-lg"
+          }
+        >
           <li>
             Assisted in building and enhancing user interfaces for web
             applications using React.js and modern frontend technologies.
@@ -57,15 +71,22 @@ const Experience = () => {
   ];
   return (
     <section id="experience" className="py-4">
-      <h4 className="text-cyan-50">Professional Experience:</h4>
-      <Tabs
-        defaultActiveKey="1"
-        items={items}
-        tabBarStyle={{
-          color: "red",
-        }}
-      />
-      ;
+      <h4
+        className={`${
+          isDark ? "text-primary-text-dark" : "text-primary-text-light"
+        }`}
+      >
+        Professional Experience:
+      </h4>
+      <div className={`${isDark ? "active-tab-dark" : "active-tab-light"}`}>
+        <Tabs
+          defaultActiveKey="1"
+          items={items}
+          tabBarStyle={{
+            color: "red",
+          }}
+        />
+      </div>
     </section>
   );
 };
