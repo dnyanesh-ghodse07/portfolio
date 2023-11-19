@@ -2,6 +2,7 @@ import Experience from "../components/Experience";
 import Navbar from "../components/Navbar";
 import Profile from "../components/Profile";
 import ProjectList from "../components/ProjectList";
+import ToolsAndTech from "../components/ToolsAndTech";
 import useTheme from "../hooks/useTheme";
 
 const Layout = () => {
@@ -13,6 +14,7 @@ const Layout = () => {
         <Navbar />
         <Profile />
         <Experience />
+        <ToolsAndTech />
         <ProjectList />
       </div>
       <div className="right"></div>

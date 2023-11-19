@@ -12,9 +12,6 @@ const Navbar = () => {
   };
 
   const isDarkClass = `${isDark ? "active-tab-dark" : "active-tab-light"}`;
-  const isDarkText = isDark
-    ? "text-primary-text-dark"
-    : "text-primary-text-light";
 
   return (
     <>
@@ -22,7 +19,9 @@ const Navbar = () => {
         <Drawer
           className={isDarkClass}
           width={"70%"}
-          title={<div className={isDarkText}>{`<dev_danny />`}</div>}
+          title={
+            <div className="text-primary-text-light dark:text-primary-text-dark">{`<dev_danny />`}</div>
+          }
           placement="right"
           onClose={onClose}
           open={open}
@@ -60,29 +59,35 @@ const Navbar = () => {
 
       <nav className="">
         <div className="mx-auto flex justify-between items-center">
-          <div className={isDarkText + " text-lg font-semibold"}>
+          <div className="text-primary-text-light dark:text-primary-text-dark text-lg font-semibold">
             {`<dev_danny />`}
           </div>
           <div className="flex items-center max-sm:hidden">
             <ThemeIcon />
             <a
               href="#project-list"
-              className={isDarkText + " hover:text-cyan-200 mr-4"}
+              className="text-primary-text-light dark:text-primary-text-dark hover:text-cyan-200 mr-4"
             >
               Work
             </a>
             <a
               href="#experience"
-              // className="text-cyan-400 hover:text-cyan-200 mr-4"
-              className={isDarkText + " hover:text-cyan-200 mr-4"}
+              className="text-primary-text-light dark:text-primary-text-dark hover:text-cyan-200 mr-4"
             >
               Experience
             </a>
-            <a href="#" className={isDarkText + " hover:text-cyan-200"}>
+            <a
+              href="#"
+              className="text-primary-text-light dark:text-primary-text-dark hover:text-cyan-200"
+            >
               Skills
             </a>
           </div>
-          <div className={isDarkText + " sm:hidden cursor-pointer"}>
+          <div
+            className={
+              "text-primary-text-light dark:text-primary-text-dark sm:hidden cursor-pointer"
+            }
+          >
             <MenuOutlined onClick={() => setOpen(true)} />
           </div>
         </div>

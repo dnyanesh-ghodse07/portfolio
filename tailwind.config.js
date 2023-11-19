@@ -10,8 +10,10 @@ export default {
         "primary-bg-light": "var(--primary-bg-light)",
         "primary-text-light": "var(--primary-text-light)",
         "secondary-text-light": "var(--secondary-text-light)",
+        "heading-text": "var(--heading-text)",
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 };

@@ -1,26 +1,34 @@
-import { BulbFilled, BulbOutlined } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { Button, Dropdown } from "antd";
 import useTheme from "../hooks/useTheme";
 
 const ThemeIcon = () => {
-  const { isDark, setIsDark } = useTheme();
+  const { setIsDark } = useTheme();
 
-  const handleTheme = () => {
-    setIsDark((prev) => !prev);
-  };
+  const items: MenuProps["items"] = [
+    {
+      key: "1",
+      label: <div onClick={() => setIsDark(true)}>Dark</div>,
+    },
+    {
+      key: "2",
+      label: <div onClick={() => setIsDark(false)}>Light</div>,
+    },
+    {
+      key: "3",
+      label: <div>System</div>,
+    },
+  ];
+
   return (
-    <div className="text-gray-100" onClick={handleTheme}>
-      {isDark ? (
-        <div className="flex justify-center items-center mr-4 px-1 rounded border-2 cursor-pointer">
-          <BulbFilled className="cursor-pointer" />
-          <span className={`${!isDark && "text-neutral-800"}`}>Light</span>
-        </div>
-      ) : (
-        <div className="flex justify-center items-center mr-4 px-1 rounded border-2 cursor-pointer">
-          <BulbOutlined className="text-neutral-800 cursor-pointer" />
-          <span className={`${!isDark && "text-neutral-800"}`}>Dark</span>
-        </div>
-      )}
-    </div>
+    <>
+      <Dropdown menu={{ items }} placement="bottomLeft" arrow>
+        <Button className="text-slate-700 dark:text-slate-200 mr-2">
+          Theme
+        </Button>
+      </Dropdown>
+      <div className="text-gray-100"></div>
+    </>
   );
 };
 

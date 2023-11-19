@@ -1,16 +1,10 @@
 import ProfileImg from "../assets/profile-pic (12).png";
-import useTheme from "../hooks/useTheme";
 import Social from "./Social";
 const Profile = () => {
-  const { isDark } = useTheme();
   return (
     <section>
-      <div
-        className={`${
-          isDark ? "text-primary-text-dark" : "text-primary-text-light"
-        }`}
-      >
-        <div className="mx-auto flex flex-col items-center justify-center py-20 px-10">
+      <div className="text-primary-text-light dark:text-primary-text-dark">
+        <div className="mx-auto flex flex-col items-center justify-center py-20">
           <img
             src={ProfileImg}
             alt="Hero Image"
@@ -19,16 +13,21 @@ const Profile = () => {
           <h1 className="text-2xl md:text-4xl font-bold mb-2 hover:animate-pulse">
             Dnyaneshwar Ghodse
           </h1>
-          <p
-            className={
-              `${
-                isDark ? "text-primary-text-dark" : "text-primary-text-light"
-              }` + " text-lg md:text-2xl"
-            }
-          >
+          <p className="text-secondary-text-light dark:text-secondary-text-dark text-lg md:text-2xl">
             Front End Engineer
           </p>
           <Social />
+          <div>
+            <div className="text-heading-text text-lg pb-2">Summary :</div>
+            <p className="mt-2">
+              Enthusiastic and dedicated Front End developer with 2 years of
+              experience in designing, developing, and delivering high-quality
+              web applications. Adept at translating design mockups into
+              responsive and interactive user interfaces while collaborating
+              with cross- functional teams to ensure seamless user experiences.
+              Proficient in React.js, Redux, and modern frontend technologies.
+            </p>
+          </div>
         </div>
       </div>
     </section>

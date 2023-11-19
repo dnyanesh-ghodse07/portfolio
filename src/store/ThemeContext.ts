@@ -1,12 +1,14 @@
-import { Dispatch, SetStateAction, createContext } from "react";
+import { MouseEventHandler, createContext } from "react";
 
 type Theme = {
   isDark: boolean;
-  setIsDark: Dispatch<SetStateAction<boolean>>;
+  toggleDarkMode: MouseEventHandler<HTMLDivElement>;
+  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
 };
 export const ThemeContext = createContext<Theme>({
   isDark: false,
-  setIsDark: () => {},
+  toggleDarkMode: () => false,
+  setIsDark: () => false,
 });
 
 export default ThemeContext;

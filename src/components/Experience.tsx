@@ -71,13 +71,7 @@ const Experience = () => {
   ];
   return (
     <section id="experience" className="py-4">
-      <h4
-        className={`${
-          isDark ? "text-primary-text-dark" : "text-primary-text-light"
-        }`}
-      >
-        Professional Experience:
-      </h4>
+      <h4 className="text-heading-text">Professional Experience:</h4>
       <div className={`${isDark ? "active-tab-dark" : "active-tab-light"}`}>
         <Tabs
           defaultActiveKey="1"

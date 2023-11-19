@@ -11,13 +11,13 @@ const Social = () => {
       <a href="https://github.com/dnyanesh-ghodse07">
         <GithubOutlined />
       </a>
-      <a href="">
+      <a href="www.linkedin.com/in/dnyaneshwar-ghodse">
         <LinkedinOutlined />
       </a>
-      <a href="">
+      <a href="mailto:ghodsednyaneshwar@gmail.com">
         <MailOutlined />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/dnyanesh.ghodse/">
         <InstagramOutlined />
       </a>
     </div>
