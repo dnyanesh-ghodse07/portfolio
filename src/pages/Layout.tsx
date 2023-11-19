@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <div className={`${isDark ? "bg-primary-bg-dark" : "bg-primary-bg-light"}`}>
       <div className="left"></div>
-      <div className="md:p-20 max-md:p-5">
+      <div className="md:p-10 max-md:p-5">
         <Navbar />
         <Profile />
         <Experience />
