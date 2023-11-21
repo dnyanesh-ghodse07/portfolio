@@ -18,7 +18,9 @@ const Profile = () => {
           </p>
           <Social />
           <div>
-            <div className="text-heading-text text-lg pb-2">Summary :</div>
+            <h1 className="border-l-2 pl-2 text-heading-text text-md">
+              Summary :
+            </h1>
             <p className="mt-2">
               Enthusiastic and dedicated Front End developer with 2 years of
               experience in designing, developing, and delivering high-quality
