@@ -57,8 +57,8 @@ const Navbar = () => {
         </Drawer>
       </div>
 
-      <nav className="">
-        <div className="mx-auto flex justify-between items-center">
+      <nav className="fixed top-0 w-full p-3 bg-slate-50 border-b-2">
+        <div className="mx-auto flex justify-around items-center">
           <div className="text-primary-text-light dark:text-primary-text-dark text-lg font-semibold">
             {`<dev_danny />`}
           </div>

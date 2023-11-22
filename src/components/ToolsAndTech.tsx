@@ -6,6 +6,10 @@ import js from "/js.svg";
 import git from "/git.svg";
 import redux from "/redux.svg";
 import sass from "/sass.svg";
+import npm from "/npm.svg";
+import vs from "/vs.svg";
+import jira from "/jira.svg";
+import tailwind from "/tailwind.svg";
 
 interface Skill {
   title: string;
@@ -56,27 +60,31 @@ const ToolsAndTech = () => {
   const tools = [
     {
       title: "VS code",
-      icon: "VS",
+      icon: vs,
     },
     {
       title: "Jira",
-      icon: "J",
+      icon: jira,
     },
     {
       title: "npm",
-      icon: "npm",
+      icon: npm,
+    },
+    {
+      title: "tailwind",
+      icon: tailwind,
     },
   ];
   return (
     <div className="py-4">
-      <h1 className="border-l-2 pl-2 text-heading-text mb-5">Tools & Tech</h1>
+      <h1 className="border-l-2 pl-2 text-heading-text mb-5">Skills</h1>
       <div className="flex gap-4 flex-wrap overflow-y-scroll text-slate-50">
         {skills.map(({ icon, title }) => {
           return <SkillCard key={title} icon={icon} title={title} />;
         })}
       </div>
       <h2 className="border-l-2 pl-2 text-heading-text mb-5">Other tools</h2>
-      <div className="flex gap-4 overflow-y-scroll text-slate-50">
+      <div className="flex flex-wrap gap-4 overflow-y-scroll text-slate-50">
         {tools.map(({ icon, title }) => {
           return <SkillCard key={title} icon={icon} title={title} />;
         })}
