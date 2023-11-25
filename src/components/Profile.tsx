@@ -3,7 +3,7 @@ import Social from "./Social";
 const Profile = () => {
   return (
     <section>
-      <div className="text-primary-text-light dark:text-primary-text-dark">
+      <div className="text-primary-text-light dark:text-primary-text-dark pt-20">
         <div className="mx-auto flex flex-col items-center justify-center py-10">
           <img
             src={ProfileImg}
