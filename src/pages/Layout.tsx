@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Profile from "../components/Profile";
 import ProjectList from "../components/ProjectList";
 import ToolsAndTech from "../components/ToolsAndTech";
-import Contact from "../components/contact";
+import Contact from "../components/Contact";
 import useTheme from "../hooks/useTheme";
 
 const Layout = () => {
