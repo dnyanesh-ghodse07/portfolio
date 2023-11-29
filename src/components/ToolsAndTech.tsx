@@ -10,6 +10,8 @@ import npm from "/npm.svg";
 import vs from "/vs.svg";
 import jira from "/jira.svg";
 import tailwind from "/tailwind.svg";
+import { useIsVisible } from "../hooks/useIsVisible";
+import { useRef } from "react";
 
 interface Skill {
   title: string;
@@ -18,6 +20,8 @@ interface Skill {
 }
 
 const ToolsAndTech = () => {
+  const ref = useRef(null);
+  const isVisible1 = useIsVisible(ref);
   const skills: Skill[] = [
     {
       title: "React",
@@ -76,7 +80,12 @@ const ToolsAndTech = () => {
     },
   ];
   return (
-    <div className="py-4">
+    <div
+      ref={ref}
+      className={`py-4 transition-opacity ease-in duration-700 ${
+        isVisible1 ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <h1 className="border-l-2 pl-2 text-heading-text mb-5">Skills</h1>
       <div className="flex gap-4 flex-wrap overflow-y-scroll text-slate-50">
         {skills.map(({ icon, title }) => {

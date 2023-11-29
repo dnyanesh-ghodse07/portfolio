@@ -1,7 +1,11 @@
 import { Tabs } from "antd";
 import useTheme from "../hooks/useTheme";
+import { useRef } from "react";
+import { useIsVisible } from "../hooks/useIsVisible";
 const Experience = () => {
   const { isDark } = useTheme();
+  const ref = useRef(null);
+  const isVisible1 = useIsVisible(ref);
   const items = [
     {
       key: "1",
@@ -70,7 +74,13 @@ const Experience = () => {
     },
   ];
   return (
-    <section id="experience" className="py-4">
+    <section
+      id="experience"
+      className={`py-10 transition-opacity ease-in duration-700 ${
+        isVisible1 ? "opacity-100" : "opacity-0"
+      }`}
+      ref={ref}
+    >
       <h4 className="border-l-2 pl-2 text-heading-text">
         Professional Experience:
       </h4>
