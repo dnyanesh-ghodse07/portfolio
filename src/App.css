@@ -1,5 +1,5 @@
 .active-tab-dark .ant-tabs-ink-bar {
-  background: red !important;
+  background: rgb(249 115 22 / 1) !important;
 }
 
 .active-tab-dark .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {

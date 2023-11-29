@@ -23,13 +23,13 @@ type Props = {
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
-    <div className="shadow dark:text-slate-200 dark:drop-shadow-xl dark:bg-slate-600 shadow-slate-50">
+    <div className="shadow-gray-700 border-[.5px] dark:text-slate-200 dark:drop-shadow-xl dark:bg-slate-600">
       <div className="">
         <img src={Music} alt="" className="" />
       </div>
       <div className="flex flex-col p-2">
-        <h1 className="">{project.projectName}</h1>
-        <p className="text-sm">{project.description}</p>
+        <h1 className="text-orange-300 font-semibold">{project.projectName}</h1>
+        <p className="text-sm font-thin">{project.description}</p>
         <div className="flex justify-between items-center">
           <div>
             {project.tool.map((item) => {
