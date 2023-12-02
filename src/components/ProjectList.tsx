@@ -1,3 +1,4 @@
+import { Divider } from "antd";
 import ProjectCard from "./ProjectCard";
 
 type Tool = {
@@ -12,6 +13,7 @@ type Project = {
   tool: Tool[];
   git_link: string;
   web_link: string;
+  features: string[];
 };
 
 const ProjectList = () => {
@@ -21,6 +23,8 @@ const ProjectList = () => {
       projectName: "Music Player",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
+      features: ["Intuitive and responsive design for a smooth user experience", "Clean and minimalistic layout to highlight the music player functionality.", "Play, pause, next, and previous buttons for easy navigation.","Real-time progress indicator for the currently playing track.",
+      "Seek functionality to jump to specific parts of the song.","Ensures a seamless experience across various devices and screen sizes."],
       tool: [
         { name: "html", color: "blue" },
         { name: "css", color: "orange" },
@@ -34,6 +38,7 @@ const ProjectList = () => {
       projectName: "Music Player",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
+      features: [""],
       tool: [
         { name: "html", color: "blue" },
         { name: "css", color: "orange" },
@@ -47,6 +52,7 @@ const ProjectList = () => {
       projectName: "Music Player",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
+      features: [""],
       tool: [
         { name: "html", color: "blue" },
         { name: "css", color: "orange" },
@@ -60,6 +66,7 @@ const ProjectList = () => {
       projectName: "Music Player",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
+        features: [""],
       tool: [
         { name: "html", color: "blue" },
         { name: "css", color: "orange" },
@@ -71,8 +78,8 @@ const ProjectList = () => {
   ];
 
   return (
-    <section id="project-list" className="container mx-auto">
-      <h1 className="text-heading-text pb-4">Projects :</h1>
+    <section id="project-list" className="container">
+      <h1 className="text-heading-text pb-4">Projects : <Divider /></h1>
       <div className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {projects.map((project) => {
           return <ProjectCard key={project.id} project={project} />;

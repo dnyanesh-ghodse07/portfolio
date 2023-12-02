@@ -1,7 +1,7 @@
 import { ExportOutlined, GithubOutlined } from "@ant-design/icons";
-import { Tag } from "antd";
+import { Button, Modal, Tag } from "antd";
 import Music from "../assets/music-p.png";
-import React from "react";
+import React, { useState } from "react";
 
 type Tool = {
   name: string;
@@ -15,6 +15,7 @@ type Project = {
   tool: Tool[];
   git_link: string;
   web_link: string;
+  features: string[];
 };
 
 type Props = {
@@ -22,16 +23,32 @@ type Props = {
 };
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="shadow-gray-700 border-[.5px] dark:text-slate-200 dark:bg-slate-600">
-      <div className="">
-        <img src={Music} alt="" className="" />
-      </div>
-      <div className="flex flex-col p-2">
-        <h1 className="text-orange-300 font-semibold">{project.projectName}</h1>
-        <p className="text-sm font-thin">{project.description}</p>
-        <div className="flex justify-between items-center">
+    <>
+      <Modal
+        footer
+        title={project.projectName}
+        open={isModalOpen}
+        onCancel={handleCancel}
+      >
+        <div className="flex flex-col gap-4">
+          <ul className="text-sm text-slate-400 list-disc">
+            {project.features.map((item) => {
+              return <li>{item}</li>;
+            })}
+          </ul>
           <div>
+            <h2>Technologies used : </h2>
             {project.tool.map((item) => {
               return (
                 <Tag color={item.color} key={item.name}>
@@ -40,17 +57,47 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
               );
             })}
           </div>
-          <div className="flex justify-end gap-2 mt-2 text-xl">
-            <a href={project.git_link}>
-              <GithubOutlined className="cursor-pointer" />
-            </a>
-            <a href={project.web_link}>
-              <ExportOutlined className="cursor-pointer" />
-            </a>
+          <div className="flex justify-between items-center">
+            <div className="flex justify-end gap-2 mt-2 text-xl">
+              <a href={project.git_link}>
+                <GithubOutlined className="cursor-pointer" />
+              </a>
+              <a href={project.web_link}>
+                <ExportOutlined className="cursor-pointer" />
+              </a>
+            </div>
           </div>
         </div>
+      </Modal>
+      <div className="shadow-md dark:text-slate-200 dark:bg-slate-600 hover:bg-slate-100">
+        <div className="">
+          <img src={Music} alt="" className="" />
+        </div>
+        <div className="flex flex-col p-2">
+          <div className="flex items-center justify-between">
+            <h1 className="text-orange-300 font-semibold">
+              {project.projectName}
+            </h1>
+            <div className="flex justify-end gap-2 text-xl">
+              <a href={project.git_link}>
+                <GithubOutlined className="cursor-pointer" />
+              </a>
+              <a href={project.web_link}>
+                <ExportOutlined className="cursor-pointer" />
+              </a>
+            </div>
+          </div>
+          <p className="text-sm font-thin">{project.description}</p>
+          <Button
+            size="small"
+            className="mt-2 text-slate-600 dark:text-slate-100"
+            onClick={showModal}
+          >
+            Know more
+          </Button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

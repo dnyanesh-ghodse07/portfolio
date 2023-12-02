@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col dark:text-slate-200 p-4">
       <h1 className="text-heading-text py-4">Contact</h1>
-      <div className="w-full md:flex gap-4">
+      <div className="w-full md:flex gap-4 justify-between">
         <div className="my-2">
           <h2>
             Email <MailFilled /> :

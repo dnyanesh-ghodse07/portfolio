@@ -50,9 +50,9 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <div>
-              <ThemeIcon />
-            </div>
+              <div className="">
+                <ThemeIcon />
+              </div>
           </div>
         </Drawer>
       </div>
