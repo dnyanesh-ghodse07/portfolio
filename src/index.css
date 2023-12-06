@@ -6,8 +6,8 @@
   --primary-bg-dark: rgb(15 23 42 / 1);
   --primary-text-dark: rgb(165 243 252/1);
   --secondary-text-dark: rgba(0, 255, 255, 0.598);
-  --primary-bg-light: rgba(255, 255, 255, 0.844);
+  --primary-bg-light: #f7f8fa;
   --primary-text-light: #000;
-  --secondary-text-light: #666;
+  --secondary-text-light: #989898;
   --heading-text: rgb(249 115 22 / 1);
 }

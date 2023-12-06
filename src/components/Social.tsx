@@ -7,7 +7,7 @@ import {
 
 const Social = () => {
   return (
-    <div className="flex gap-4 p-4 text-teal-400 text-2xl">
+    <div className="flex gap-4 p-4 dark:text-slate-100 text-2xl">
       <a href="https://github.com/dnyanesh-ghodse07">
         <GithubOutlined />
       </a>

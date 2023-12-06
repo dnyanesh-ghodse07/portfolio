@@ -87,7 +87,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
               </a>
             </div>
           </div>
-          <p className="text-sm font-thin">{project.description}</p>
+          <p className="text-sm">{project.description}</p>
           <Button
             size="small"
             className="mt-2 text-slate-600 dark:text-slate-100"
