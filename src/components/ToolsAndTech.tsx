@@ -2,11 +2,14 @@ import SkillCard from "./SkillCard";
 import reactIcon from "/react.svg";
 import css from "/css.svg";
 import html from "/html.svg";
+import node from '/node.svg';
+import express from '/express.svg';
 import js from "/js.svg";
 import git from "/git.svg";
 import redux from "/redux.svg";
 import sass from "/sass.svg";
 import npm from "/npm.svg";
+import styled from '/styled.svg';
 import vs from "/vs.svg";
 import jira from "/jira.svg";
 import tailwind from "/tailwind.svg";
@@ -59,6 +62,21 @@ const ToolsAndTech = () => {
       icon: sass,
       desc: "Sass, or Syntactically Awesome Stylesheets, is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).",
     },
+    {
+      title: "Styled",
+      icon: styled,
+      desc: "Sass, or Syntactically Awesome Stylesheets, is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).",
+    },
+    {
+      title: "Node.js",
+      icon: node,
+      desc: "Sass, or Syntactically Awesome Stylesheets, is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).",
+    },
+    {
+      title: "Express.js",
+      icon: express,
+      desc: "Sass, or Syntactically Awesome Stylesheets, is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).",
+    }
   ];
 
   const tools = [

@@ -1,4 +1,3 @@
-import ProfileImg from "../assets/profile-pic (12).png";
 import Social from "./Social";
 const Profile = () => {
   return (
@@ -6,7 +5,7 @@ const Profile = () => {
       <div className="text-primary-text-light dark:text-primary-text-dark pt-20">
         <div className="mx-auto flex flex-col items-center justify-center py-10">
           <img
-            src={ProfileImg}
+            src='/public/assets/profile-pic (12).png'
             alt="Hero Image"
             className="rounded-full w-32 h-32 mb-4"
           />
@@ -22,12 +21,7 @@ const Profile = () => {
               Summary :
             </h1>
             <p className="mt-2">
-              Enthusiastic and dedicated Front End developer with 2 years of
-              experience in designing, developing, and delivering high-quality
-              web applications. Adept at translating design mockups into
-              responsive and interactive user interfaces while collaborating
-              with cross- functional teams to ensure seamless user experiences.
-              Proficient in React.js, Redux, and modern frontend technologies.
+            Highly skilled Front-End Developer with over 2 years of experience in developing and implementing front-end architectures that have resulted in significant increases in page load speed and user engagement. Proficient in collaborating with back-end teams to integrate user-facing elements with server-side logic and optimizing components for maximum performance. Adept at identifying and resolving performance and scalability issues, staying up-to-date with emerging technologies and frameworks, and reducing development time.
             </p>
           </div>
         </div>

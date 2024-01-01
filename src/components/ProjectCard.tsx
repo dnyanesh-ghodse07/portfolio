@@ -1,6 +1,6 @@
 import { ExportOutlined, GithubOutlined } from "@ant-design/icons";
 import { Button, Modal, Tag } from "antd";
-import Music from "../assets/music-p.png";
+// import Music from "../assets/music-p.png";
 import React, { useState } from "react";
 
 type Tool = {
@@ -11,6 +11,7 @@ type Tool = {
 type Project = {
   id: string;
   projectName: string;
+  image: string;
   description: string;
   tool: Tool[];
   git_link: string;
@@ -44,14 +45,14 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         <div className="flex flex-col gap-4">
           <ul className="text-sm text-slate-400 list-disc">
             {project.features.map((item) => {
-              return <li>{item}</li>;
+              return <li key={item}>{item}</li>;
             })}
           </ul>
           <div>
             <h2>Technologies used : </h2>
             {project.tool.map((item) => {
               return (
-                <Tag color={item.color} key={item.name}>
+                <Tag className="m-1" color={item.color} key={item.name}>
                   {item.name}
                 </Tag>
               );
@@ -71,7 +72,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       </Modal>
       <div className="shadow-md dark:text-slate-200 dark:bg-slate-600 hover:bg-slate-100">
         <div className="">
-          <img src={Music} alt="" className="" />
+          <img src={`/public/assets/${project.image}.png`} alt="" className="" />
         </div>
         <div className="flex flex-col p-2">
           <div className="flex items-center justify-between">
