@@ -5,7 +5,7 @@ const Profile = () => {
       <div className="text-primary-text-light dark:text-primary-text-dark pt-20">
         <div className="mx-auto flex flex-col items-center justify-center py-10">
           <img
-            src='/public/assets/profile-pic (12).png'
+            src='../assets/profile-pic (12).png'
             alt="Hero Image"
             className="rounded-full w-32 h-32 mb-4"
           />

@@ -22,7 +22,7 @@ const ProjectList = () => {
     {
       id: "73423",
       projectName: "Age Old - Hotel Manage",
-      image: "hotel",
+      image: "../assets/hotel.png",
       description:
         "App for hotels to manage cabins, booking,account & users & also show the insight of Data",
       features: [
@@ -46,7 +46,7 @@ const ProjectList = () => {
     {
       id: "13423",
       projectName: "Music Player",
-      image: "music",
+      image: "../assets/music.png",
       description:
         "Music player with functionalities like play,pause, music progress using javascript, html & css",
       features: [
@@ -68,7 +68,7 @@ const ProjectList = () => {
     {
       id: "2033",
       projectName: "Music Player",
-      image: "hotel",
+      image: "../assets/music.png",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
       features: [""],
@@ -83,7 +83,7 @@ const ProjectList = () => {
     {
       id: "90823",
       projectName: "Music Player",
-      image: "hotel",
+      image: "../assets/music.png",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
       features: [""],
