@@ -1,5 +1,8 @@
 import { Divider } from "antd";
 import ProjectCard from "./ProjectCard";
+import HotelImg from '../assets/hotel.png';
+import Music from '../assets/music.png';
+
 
 type Tool = {
   name: string;
@@ -22,7 +25,7 @@ const ProjectList = () => {
     {
       id: "73423",
       projectName: "Age Old - Hotel Manage",
-      image: "../assets/hotel.png",
+      image: HotelImg,
       description:
         "App for hotels to manage cabins, booking,account & users & also show the insight of Data",
       features: [
@@ -46,7 +49,7 @@ const ProjectList = () => {
     {
       id: "13423",
       projectName: "Music Player",
-      image: "../assets/music.png",
+      image: Music,
       description:
         "Music player with functionalities like play,pause, music progress using javascript, html & css",
       features: [
@@ -65,36 +68,36 @@ const ProjectList = () => {
       git_link: "https://github.com/dnyanesh-ghodse07/music-player",
       web_link: "https://music-player-d1.netlify.app/",
     },
-    {
-      id: "2033",
-      projectName: "Music Player",
-      image: "../assets/music.png",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
-      features: [""],
-      tool: [
-        { name: "html", color: "blue" },
-        { name: "css", color: "orange" },
-        { name: "js", color: "yellow" },
-      ],
-      git_link: "https://github.com/dnyanesh-ghodse07/music-player",
-      web_link: "https://music-player-d1.netlify.app/",
-    },
-    {
-      id: "90823",
-      projectName: "Music Player",
-      image: "../assets/music.png",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
-      features: [""],
-      tool: [
-        { name: "html", color: "blue" },
-        { name: "css", color: "orange" },
-        { name: "js", color: "yellow" },
-      ],
-      git_link: "https://github.com/dnyanesh-ghodse07/music-player",
-      web_link: "https://music-player-d1.netlify.app/",
-    },
+    // {
+    //   id: "2033",
+    //   projectName: "Music Player",
+    //   image: "",
+    //   description:
+    //     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
+    //   features: [""],
+    //   tool: [
+    //     { name: "html", color: "blue" },
+    //     { name: "css", color: "orange" },
+    //     { name: "js", color: "yellow" },
+    //   ],
+    //   git_link: "https://github.com/dnyanesh-ghodse07/music-player",
+    //   web_link: "https://music-player-d1.netlify.app/",
+    // },
+    // {
+    //   id: "90823",
+    //   projectName: "Music Player",
+    //   image: "",
+    //   description:
+    //     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur",
+    //   features: [""],
+    //   tool: [
+    //     { name: "html", color: "blue" },
+    //     { name: "css", color: "orange" },
+    //     { name: "js", color: "yellow" },
+    //   ],
+    //   git_link: "https://github.com/dnyanesh-ghodse07/music-player",
+    //   web_link: "https://music-player-d1.netlify.app/",
+    // },
   ];
 
   return (

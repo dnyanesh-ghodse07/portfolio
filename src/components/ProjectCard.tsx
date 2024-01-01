@@ -71,15 +71,17 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         </div>
       </Modal>
       <div className="shadow-md dark:text-slate-200 dark:bg-slate-600 hover:bg-slate-100">
-        <div className="">
-          <img src={`/public/assets/${project.image}.png`} alt="" className="" />
+        <div className="" >
+          <img src={project.image} alt="" className="object-cover max-h-36 w-full" />
         </div>
         <div className="flex flex-col p-2">
           <div className="flex items-center justify-between">
             <h1 className="text-orange-300 font-semibold">
               {project.projectName}
             </h1>
-            <div className="flex justify-end gap-2 text-xl">
+          </div>
+          <p className="text-sm">{project.description.substring(0,80)}</p>
+          <div className="flex justify-end gap-2 text-xl">
               <a href={project.git_link}>
                 <GithubOutlined className="cursor-pointer" />
               </a>
@@ -87,8 +89,6 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                 <ExportOutlined className="cursor-pointer" />
               </a>
             </div>
-          </div>
-          <p className="text-sm">{project.description}</p>
           <Button
             size="small"
             className="mt-2 text-slate-600 dark:text-slate-100"

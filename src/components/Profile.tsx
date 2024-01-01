@@ -1,11 +1,12 @@
 import Social from "./Social";
+import ProfileImg from '../assets/profile-pic (12).png';
 const Profile = () => {
   return (
     <section>
       <div className="text-primary-text-light dark:text-primary-text-dark pt-20">
         <div className="mx-auto flex flex-col items-center justify-center py-10">
           <img
-            src='../assets/profile-pic (12).png'
+            src={ProfileImg}
             alt="Hero Image"
             className="rounded-full w-32 h-32 mb-4"
           />
